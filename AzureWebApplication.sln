@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "AzureWebApplication", "AzureWebApplication\AzureWebApplication.oxygene", "{FF9C7C62-1073-4A30-9AFB-7DB842D220E7}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "QueueConsoleApplication", "QueueConsoleApplication\QueueConsoleApplication.oxygene", "{8DA2028A-B676-4651-A42E-9A59E839AD4E}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "HangFireConsoleApplication", "HangFireConsoleApplication\HangFireConsoleApplication.oxygene", "{258240C7-FB60-47E4-9321-AB1EBF2AEF31}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Release|Mixed Platforms = Release|Mixed Platforms
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FF9C7C62-1073-4A30-9AFB-7DB842D220E7}.Debug|Mixed Platforms.ActiveCfg = Debug
+		{FF9C7C62-1073-4A30-9AFB-7DB842D220E7}.Debug|Mixed Platforms.Build.0 = Debug
+		{FF9C7C62-1073-4A30-9AFB-7DB842D220E7}.Release|Mixed Platforms.ActiveCfg = Release
+		{FF9C7C62-1073-4A30-9AFB-7DB842D220E7}.Release|Mixed Platforms.Build.0 = Release
+		{8DA2028A-B676-4651-A42E-9A59E839AD4E}.Debug|Mixed Platforms.ActiveCfg = Debug
+		{8DA2028A-B676-4651-A42E-9A59E839AD4E}.Debug|Mixed Platforms.Build.0 = Debug
+		{8DA2028A-B676-4651-A42E-9A59E839AD4E}.Release|Mixed Platforms.ActiveCfg = Release
+		{8DA2028A-B676-4651-A42E-9A59E839AD4E}.Release|Mixed Platforms.Build.0 = Release
+		{258240C7-FB60-47E4-9321-AB1EBF2AEF31}.Debug|Mixed Platforms.ActiveCfg = Debug
+		{258240C7-FB60-47E4-9321-AB1EBF2AEF31}.Debug|Mixed Platforms.Build.0 = Debug
+		{258240C7-FB60-47E4-9321-AB1EBF2AEF31}.Release|Mixed Platforms.ActiveCfg = Release
+		{258240C7-FB60-47E4-9321-AB1EBF2AEF31}.Release|Mixed Platforms.Build.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
