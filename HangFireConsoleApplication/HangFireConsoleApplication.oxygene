@@ -64,17 +64,16 @@
       <HintPath>..\packages\Dapper.1.13\lib\net45\Dapper.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="HangFire.Azure.ServiceBusQueue">
-      <HintPath>..\packages\HangFire.Azure.ServiceBusQueue.0.0.1\lib\net45\HangFire.Azure.ServiceBusQueue.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="Hangfire.Core">
       <HintPath>..\packages\Hangfire.Core.1.1.1\lib\net45\Hangfire.Core.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Hangfire.SqlServer">
-      <HintPath>..\packages\Hangfire.SqlServer.1.1.1\lib\net45\Hangfire.SqlServer.dll</HintPath>
+    <Reference Include="Hangfire.Redis">
+      <HintPath>..\packages\Hangfire.Redis.1.1.1\lib\net45\Hangfire.Redis.dll</HintPath>
       <Private>True</Private>
+    </Reference>
+    <Reference Include="Hangfire.SqlServer">
+      <HintPath>..\..\AzureWebApplication\packages\HangFire.SqlServer.1.1.1\lib\net45\Hangfire.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.Owin">
@@ -90,7 +89,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.ServiceBus">
-      <HintPath>..\packages\WindowsAzure.ServiceBus.2.3.4.0\lib\net40-full\Microsoft.ServiceBus.dll</HintPath>
+      <HintPath>..\packages\WindowsAzure.ServiceBus.2.4.4.0\lib\net40-full\Microsoft.ServiceBus.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.WindowsAzure.Configuration">
@@ -112,6 +111,22 @@
     </Reference>
     <Reference Include="Owin">
       <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ServiceStack.Common">
+      <HintPath>..\packages\ServiceStack.Common.3.9.71\lib\net35\ServiceStack.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ServiceStack.Interfaces">
+      <HintPath>..\packages\ServiceStack.Common.3.9.71\lib\net35\ServiceStack.Interfaces.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ServiceStack.Redis">
+      <HintPath>..\packages\ServiceStack.Redis.3.9.71\lib\net35\ServiceStack.Redis.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ServiceStack.Text">
+      <HintPath>..\packages\ServiceStack.Text.3.9.71\lib\net35\ServiceStack.Text.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
@@ -136,14 +151,17 @@
     <Compile Include="Module\SomeModule.pas" />
     <Compile Include="Program.pas" />
     <Compile Include="Properties\AssemblyInfo.pas" />
+    <Compile Include="ServiceBusQueue\ServiceBusQueueFetchedJob.pas" />
+    <Compile Include="ServiceBusQueue\ServiceBusQueueJobQueue.pas" />
+    <Compile Include="ServiceBusQueue\ServiceBusQueueJobQueueProvider.pas" />
+    <Compile Include="ServiceBusQueue\ServiceBusQueueMonitoringApi.pas" />
+    <Compile Include="ServiceBusQueue\ServiceBusQueueSqlServerStorageExtensions.pas" />
+    <Compile Include="Services\SomeService.pas" />
     <Compile Include="Startup.pas" />
     <Content Include="app.config">
       <SubType>Content</SubType>
     </Content>
     <Content Include="packages.config">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Performance\Microsoft.ServiceBus.MessagingPerformanceCounters.man">
       <SubType>Content</SubType>
     </Content>
     <Content Include="Properties\App.ico" />
@@ -158,7 +176,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Module" />
-    <Folder Include="Performance\" />
+    <Folder Include="Services" />
+    <Folder Include="ServiceBusQueue" />
     <Folder Include="Properties\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\RemObjects Software\Oxygene\RemObjects.Oxygene.Echoes.targets" />

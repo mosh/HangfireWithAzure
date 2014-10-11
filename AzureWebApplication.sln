@@ -9,6 +9,10 @@ Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "QueueConsoleApplication", "
 EndProject
 Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "HangFireConsoleApplication", "HangFireConsoleApplication\HangFireConsoleApplication.oxygene", "{258240C7-FB60-47E4-9321-AB1EBF2AEF31}"
 EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "RedisCacheConsoleApplication", "RedisCacheConsoleApplication\RedisCacheConsoleApplication.oxygene", "{C46AA960-0916-495D-8DC2-CAD063944147}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "MessageExecutorConsoleApplication", "MessageExecutorConsoleApplication\MessageExecutorConsoleApplication.oxygene", "{E3253451-280D-48B6-99BE-A23946F5EBF1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Mixed Platforms = Debug|Mixed Platforms
@@ -27,6 +31,14 @@ Global
 		{258240C7-FB60-47E4-9321-AB1EBF2AEF31}.Debug|Mixed Platforms.Build.0 = Debug
 		{258240C7-FB60-47E4-9321-AB1EBF2AEF31}.Release|Mixed Platforms.ActiveCfg = Release
 		{258240C7-FB60-47E4-9321-AB1EBF2AEF31}.Release|Mixed Platforms.Build.0 = Release
+		{C46AA960-0916-495D-8DC2-CAD063944147}.Debug|Mixed Platforms.ActiveCfg = Debug
+		{C46AA960-0916-495D-8DC2-CAD063944147}.Debug|Mixed Platforms.Build.0 = Debug
+		{C46AA960-0916-495D-8DC2-CAD063944147}.Release|Mixed Platforms.ActiveCfg = Release
+		{C46AA960-0916-495D-8DC2-CAD063944147}.Release|Mixed Platforms.Build.0 = Release
+		{E3253451-280D-48B6-99BE-A23946F5EBF1}.Debug|Mixed Platforms.ActiveCfg = Debug
+		{E3253451-280D-48B6-99BE-A23946F5EBF1}.Debug|Mixed Platforms.Build.0 = Debug
+		{E3253451-280D-48B6-99BE-A23946F5EBF1}.Release|Mixed Platforms.ActiveCfg = Release
+		{E3253451-280D-48B6-99BE-A23946F5EBF1}.Release|Mixed Platforms.Build.0 = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

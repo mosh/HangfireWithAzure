@@ -6,7 +6,8 @@ uses
   System.Collections.Generic,
   System.Linq,
   System.Text, 
-  HangFire,
+  Hangfire,
+  HangFireConsoleApplication.Services,
   Nancy;
 
 type
@@ -23,11 +24,7 @@ constructor SomeModule;
 begin
   Post['/DoWork'] := () ->
     begin
-      BackgroundJob.Enqueue(() -> 
-        begin
-          Console.WriteLine('Hello');
-        end
-      );
+      BackgroundJob.Enqueue<SomeService>( x -> x.SomeMethod);
     end;
 
 end;

@@ -4,14 +4,15 @@ interface
 
 uses
   Microsoft.WindowsAzure,
-  HangFire,
+  Hangfire,
   Hangfire.Storage.*,
-  HangFire.Azure.ServiceBusQueue,
   System.Configuration,
   Hangfire.SqlServer,
+  Hangfire.Redis,
   System.Collections.Generic,
   System.Linq,
   System.Text, 
+  HangFireConsoleApplication.ServiceBusQueue,
   Owin;
 
 type
@@ -33,10 +34,12 @@ begin
     begin
       var databaseConnectionString := ConfigurationManager.AppSettings['Database'];
       var serviceBusConnectionString := CloudConfigurationManager.GetSetting('Microsoft.ServiceBus.ConnectionString');
+      var redisConnectionString := ConfigurationManager.AppSettings['Redis'];
 
       config
       .UseSqlServerStorage(databaseConnectionString)
-      .UseServiceBusQueues(serviceBusConnectionString);
+//      .UseRedisStorage(redisConnectionString)
+      .UseServiceBusQueues(serviceBusConnectionString,['default']);
 
       config.UseServer();
     end
