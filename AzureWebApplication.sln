@@ -1,8 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.30723.0
-MinimumVisualStudioVersion = 10.0.40219.1
+# Visual Studio 2012
 Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "AzureWebApplication", "AzureWebApplication\AzureWebApplication.oxygene", "{FF9C7C62-1073-4A30-9AFB-7DB842D220E7}"
 EndProject
 Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "QueueConsoleApplication", "QueueConsoleApplication\QueueConsoleApplication.oxygene", "{8DA2028A-B676-4651-A42E-9A59E839AD4E}"
@@ -12,6 +10,8 @@ EndProject
 Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "RedisCacheConsoleApplication", "RedisCacheConsoleApplication\RedisCacheConsoleApplication.oxygene", "{C46AA960-0916-495D-8DC2-CAD063944147}"
 EndProject
 Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "MessageExecutorConsoleApplication", "MessageExecutorConsoleApplication\MessageExecutorConsoleApplication.oxygene", "{E3253451-280D-48B6-99BE-A23946F5EBF1}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "MessagePipelineConsoleApplication", "MessagePipelineConsoleApplication\MessagePipelineConsoleApplication.oxygene", "{12806968-15EA-4778-9BC6-771046174FC2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +39,10 @@ Global
 		{E3253451-280D-48B6-99BE-A23946F5EBF1}.Debug|Mixed Platforms.Build.0 = Debug
 		{E3253451-280D-48B6-99BE-A23946F5EBF1}.Release|Mixed Platforms.ActiveCfg = Release
 		{E3253451-280D-48B6-99BE-A23946F5EBF1}.Release|Mixed Platforms.Build.0 = Release
+		{12806968-15EA-4778-9BC6-771046174FC2}.Debug|Mixed Platforms.ActiveCfg = Debug
+		{12806968-15EA-4778-9BC6-771046174FC2}.Debug|Mixed Platforms.Build.0 = Debug
+		{12806968-15EA-4778-9BC6-771046174FC2}.Release|Mixed Platforms.ActiveCfg = Release
+		{12806968-15EA-4778-9BC6-771046174FC2}.Release|Mixed Platforms.Build.0 = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

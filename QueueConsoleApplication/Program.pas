@@ -28,10 +28,9 @@ implementation
 class method ConsoleApp.Main(args: array of String);
 begin
 
-//  CreateQueueIfRequired;
-//
-//  var client := GetQueueClient;
-//  //SendMessage(client,'John','Smith');
+  CreateQueueIfRequired;
+  var client := GetQueueClient;
+  SendMessage(client,'John','Smith');
 //  ReceiveMessage(client);
 
   
