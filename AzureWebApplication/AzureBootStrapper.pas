@@ -11,7 +11,9 @@ uses
   Autofac,
   Moshine.MessagePipeline,
   Nancy, 
+  Nancy.Bootstrapper,
   Nancy.Bootstrappers.Autofac, 
+  Nancy.Elmah,
   StackExchange.Redis;
 
 type
@@ -19,6 +21,7 @@ type
   AzureBootStrapper = public class(AutofacNancyBootstrapper)
   private
   protected
+    method ApplicationStartup(container: ILifetimeScope; pipelines: Nancy.Bootstrapper.IPipelines); override;
     method ConfigureApplicationContainer(existingContainer:ILifetimeScope);override;
   public
   end;
@@ -37,6 +40,15 @@ begin
   var builder := new ContainerBuilder();
   builder.Register(c -> begin
                      var obj := new Pipeline(connectionString,'TestQueue',cache);
+                     obj.ErrorCallback := (e) ->
+                      begin
+                        System.Diagnostics.Trace.TraceInformation(e.ToString);
+                        Elmah.ErrorSignal.FromCurrentContext().Raise(e);
+                      end;
+                     obj.TraceCallback := (m) ->
+                      begin
+                        System.Diagnostics.Trace.TraceInformation(m);
+                      end;
                      obj.Start;
                      exit obj;
                      end).As<Pipeline>().SingleInstance;
@@ -45,6 +57,12 @@ begin
   
   builder.Update(existingContainer.ComponentRegistry);
 
+end;
+
+method AzureBootStrapper.ApplicationStartup(container: ILifetimeScope; pipelines: Nancy.Bootstrapper.IPipelines);
+begin
+  inherited.ApplicationStartup(container, pipelines);
+  Elmahlogging.Enable(pipelines,'logging');
 end;
 
 end.

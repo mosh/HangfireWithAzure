@@ -20,6 +20,7 @@ implementation
 
 method AzureService.SomeMethod: dynamic;
 begin
+  System.Diagnostics.Trace.TraceInformation('AzureService.SomeMethod');
   var obj:dynamic := new ExpandoObject;
   obj.Id := 1;
   exit obj;

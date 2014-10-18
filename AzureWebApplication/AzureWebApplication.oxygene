@@ -30,6 +30,10 @@
       <HintPath>..\packages\Autofac.3.3.1\lib\net40\Autofac.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Elmah">
+      <HintPath>..\packages\elmah.corelibrary.1.2.2\lib\Elmah.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.Owin">
       <HintPath>..\packages\Microsoft.Owin.3.0.0\lib\net45\Microsoft.Owin.dll</HintPath>
       <Private>True</Private>
@@ -58,6 +62,10 @@
     </Reference>
     <Reference Include="Nancy.Bootstrappers.Autofac">
       <HintPath>..\packages\Nancy.Bootstrappers.Autofac.0.23.2\lib\net40\Nancy.Bootstrappers.Autofac.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Nancy.Elmah">
+      <HintPath>..\packages\Nancy.Elmah.0.1.8\lib\net40\Nancy.Elmah.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Nancy.Owin">
@@ -109,6 +117,9 @@
     <Compile Include="Modules\HomeModule.pas" />
     <Compile Include="Services\AzureService.pas" />
     <Compile Include="Startup.pas" />
+    <Content Include="App_Readme\Elmah.txt">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="Global.asax" />
     <Compile Include="Global.asax.pas">
       <DependentUpon>Global.asax</DependentUpon>
@@ -120,6 +131,7 @@
     <Compile Include="Properties\AssemblyInfo.pas" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="App_Readme\" />
     <Folder Include="Modules" />
     <Folder Include="Services" />
     <Folder Include="Properties\" />
